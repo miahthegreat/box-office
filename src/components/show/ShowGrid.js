@@ -6,13 +6,13 @@ import { FlexGrid } from '../styled';
 import IMAGE_NOT_FOUND from '../../images/not-found.png';
 import { useShows } from '../../misc/custom-hooks';
 
-const ShowGrid = ({ results }) => {
+const ShowGrid = ({ data }) => {
 
   const [starredShows, dispatchStarred] = useShows();
 
   return (
     <FlexGrid>
-      {results.map(({show}) => {
+      {data.map(({ show }) => {
 
         const isStarred = starredShows.includes(show.id);
 
